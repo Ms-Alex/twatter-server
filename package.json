@@ -1,0 +1,27 @@
+{
+  "name": "twatter-server",
+  "version": "1.0.0",
+  "description": "express backend for twatter app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ms-Alex/twatter-server.git"
+  },
+  "author": "Alexandra Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ms-Alex/twatter-server/issues"
+  },
+  "homepage": "https://github.com/Ms-Alex/twatter-server#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.3"
+  }
+}
