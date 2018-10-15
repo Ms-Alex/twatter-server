@@ -1,13 +1,20 @@
+require('dotenv').config();  // will load all env variables
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('./handlers/error');
+const authRoutes = require('./routes/auth');
+const db = require('./models')
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+//all routes here. Order matters.
+app.use('/api/auth', authRoutes)
 
 //error handler
 app.use(function(req, res, next){
