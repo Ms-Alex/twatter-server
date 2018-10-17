@@ -39,7 +39,7 @@ userSchema.pre('save', async function(next){
 
 // Next for async functions to tell express when to move on to next piece of middleware.
 // Instance method to check input password to password saved in db
-userSchema.method.comparePassword = async function(candidatePassword, next){
+userSchema.methods.comparePassword = async function(candidatePassword, next){
     try {
         let isMatch = await bcrypt.compare(candidatePassword, this.password);
         // isMatch will return a boolean
