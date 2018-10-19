@@ -12,3 +12,4 @@ mongoose.connect('mongodb://localhost/twatter', {
 
 // idea of bundling
 module.exports.User = require('./user')
+module.exports.Message = require('./message')
