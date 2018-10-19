@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('./handlers/error');
 const authRoutes = require('./routes/auth');
+const messagesRoutes = require('./routes/messages');
 const db = require('./models')
 
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 //all routes here. Order matters.
 app.use('/api/auth', authRoutes)
+app.unsubscribe('/api/users/:id/messages', messagesRoutes);
 
 //error handler
 app.use(function(req, res, next){
