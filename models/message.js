@@ -11,7 +11,11 @@ const messageSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }
-});
+},
+    {
+        timestamps: true
+    }
+);
 
 //assure that message record is not only deleted from message table, but user table too
 messageSchema.pre("remove", async function (next) {
