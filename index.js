@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const errorHandler = require('./handlers/error');
 const authRoutes = require('./routes/auth');
 const messagesRoutes = require('./routes/messages');
-const db = require('./models')
-
+const db = require('./models');
+const { loginRequired, ensureCorrectUser } = require('./middleware/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +16,12 @@ app.use(bodyParser.json());
 
 //all routes here. Order matters.
 app.use('/api/auth', authRoutes)
-app.unsubscribe('/api/users/:id/messages', messagesRoutes);
+app.use(
+    '/api/users/:id/messages', 
+    loginRequired, 
+    ensureCorrectUser, 
+    messagesRoutes
+);
 
 //error handler
 app.use(function(req, res, next){
