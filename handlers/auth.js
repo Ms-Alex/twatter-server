@@ -9,7 +9,7 @@ exports.signin = async function(req, res, next){
         });
         let { id, username, profileImageUrl } = user;
         //check if their password matches
-        let isMatch = await bcrypt.compare(req.body.password);
+        let isMatch = await user.comparePassword(req.body.password);
         //login them in, by createing a jwt
         if (isMatch) {
             let token = jwt.sign({
