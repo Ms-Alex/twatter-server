@@ -28,7 +28,7 @@ exports.loginRequired = function(req, res, next) {
 // make sure we get the correct user - Authorization
 exports.ensureCorrectUser = function (req, res, next) { 
     try {
-        let token = req.headers.authorization.split()[1];
+        let token = req.headers.authorization.split(" ")[1];
         jwt.verify(token, process.env.SECRET_KEY, function(err, decoded){
             // prevent users from tampering with other user's mssgs
             if(decoded && decoded.id === req.params.id){
