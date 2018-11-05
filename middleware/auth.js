@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 // make sure user is logged - Authentication (are your credentials correct)
 exports.loginRequired = function(req, res, next) {
     try {
-        const token = req.headers.authorization.split()[1];
+        const token = req.headers.authorization.split(" ")[1];
         jwt.verify(token, process.env.SECRET_KEY, function(err, decoded){
             if(decoded){
                 return next();
