@@ -31,21 +31,21 @@ npm install
 Before you are able to post anything, you must login, if not sign up: 
 
 <p align="center">
-<img src="https://media.giphy.com/media/NUPH22UqpVD5jMleba/giphy.gif" alt="twatter demo 1">
+<img src="https://media.giphy.com/media/3ddZTKKzj7AeYgQIjd/giphy.gif" alt="twatter demo 1">
 </p>
 
 
 You can post a status message:
 
 <p align="center">
-<img src="https://media.giphy.com/media/dgSH6VZ1fwFJuebfub/giphy.gif" alt="twatter demo 2">
+<img src="https://media.giphy.com/media/yv17RtHHRqBNiabyTu/giphy.gif" alt="twatter demo 2">
 </p>
 
 
 You can delete a status message:
 
 <p align="center">
-<img src="https://media.giphy.com/media/9PrqURgus0HC1kRgrw/giphy.gif" alt="twatter demo 3">
+<img src="https://media.giphy.com/media/MU3dwOpt9pdNWnpQgV/giphy.gif" alt="twatter demo 3">
 </p>
 
 
