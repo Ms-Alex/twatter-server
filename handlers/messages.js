@@ -4,7 +4,8 @@ exports.createMessage = async function(req, res, next) {
     try {
         let message = await db.Message.create({
             text: req.body.text,
-            user: req.params.id
+            user: req.params.id,
+            likes: 0
         });
 
         let foundUser = await db.User.findById(req.params.id);
@@ -46,7 +47,7 @@ exports.deleteMessage = async function(req, res, next) {
 
 exports.editMessage = async function(req, res, next) {
     try {
-        let message = await db.Message.findOneAndUpdate({_id: req.params.message_id}, { $set: {text: req.body.text} }, {new: true});
+        let message = await db.Message.findOneAndUpdate({_id: req.params.message_id}, { $set: req.body }, {new: true});
         console.log(message);
         return res.status(200).json(message);
 

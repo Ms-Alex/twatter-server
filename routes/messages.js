@@ -1,11 +1,16 @@
 const express = require('express');
 // mergeParams will allows to get access to the id inside of his router
-const router = express.Router({ mergeParams: true });
+const router1 = express.Router({ mergeParams: true });
+const router2 = express.Router({ mergeParams: true });
 
 const { createMessage, getMessage, deleteMessage, editMessage } = require('../handlers/messages')
 
 // prefix - /api/users/:id/messages
-router.route('/').post(createMessage);
-router.route('/:message_id').get(getMessage).delete(deleteMessage).put(editMessage);
+router1.route('/').post(createMessage);
+router1.route('/:message_id').get(getMessage).delete(deleteMessage).put(editMessage);
 
-module.exports = router;
+// prefix - /api/messages/:message_id
+router2.route('/:message_id').put(editMessage);
+
+module.exports.router1 = router1;
+module.exports.router2 = router2;

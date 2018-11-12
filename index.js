@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const errorHandler = require('./handlers/error');
 const authRoutes = require('./routes/auth');
 const messagesRoutes = require('./routes/messages');
+const usersRoutes = require('./routes/users');
 const db = require('./models');
 const { loginRequired, ensureCorrectUser } = require('./middleware/auth');
 
@@ -20,20 +21,40 @@ app.use(
     '/api/users/:id/messages', 
     loginRequired, 
     ensureCorrectUser, 
-    messagesRoutes
+    messagesRoutes.router1
 );
 
-app.use('/api/messages', loginRequired, async function(req, res, next){
-    try {
-        let messages = await db.Message.find().sort({ createdAt: "desc"}).populate("user", {
-            username: true,
-            profileImageUrl: true
-        });
-        return res.status(200).json(messages);
-    } catch (err) {
-        return next(err);
+app.use('/api/messages', 
+    loginRequired, 
+    messagesRoutes.router2, 
+    async function(req, res, next){
+        try {
+            let messages = await db.Message.find().sort({ createdAt: "desc"}).populate("user", {
+                username: true,
+                profileImageUrl: true
+            });
+            return res.status(200).json(messages);
+        } catch (err) {
+            return next(err);
+        }
     }
-});
+);
+
+app.use('/api/users', 
+    loginRequired, 
+    usersRoutes
+)
+
+// app.put('/api/messages/:message_id', loginRequired, async function (req, res, next) {
+//     try {
+//         let message = await db.Message.findOneAndUpdate({ _id: req.params.message_id }, { $set: req.body }, { new: true });
+//         console.log(message);
+//         return res.status(200).json(message);
+
+//     } catch (err) {
+//         return next(err);
+//     }
+// } )
 
 //error handler
 app.use(function(req, res, next){
