@@ -1,9 +1,9 @@
 # Twatter
 > A social application where you can add your status, throughout the day! As well as, checking out others' status' too!!
 
-Created with Node with Express backend, auth implementation using jasonWebToken, and a React with Redux frontend. Twatter allows you to post and delete any message you want to put out there. You can also view what others are saying, too.
+Created with Node with Express backend, auth implementation using jasonWebToken, and a React with Redux frontend. Twatter allows you to post, edit, and delete any message you want to put out there. Also, you can view what others' profile and like their status messages. Can't forget: edit your profile page, too!
 
-More functionalty to come.
+Deployed on Heroku: https://twatter-client-ah.herokuapp.com/
 
 Express frontend repo available here: https://github.com/Ms-Alex/twatter-client
 
@@ -31,21 +31,33 @@ npm install
 Before you are able to post anything, you must login, if not sign up: 
 
 <p align="center">
-<img src="https://media.giphy.com/media/3ddZTKKzj7AeYgQIjd/giphy.gif" alt="twatter demo 1">
+<img src="https://media.giphy.com/media/620s9Zl7ROQClqyMSJ/giphy.gif" alt="twatter demo 1">
 </p>
 
 
 You can post a status message:
 
 <p align="center">
-<img src="https://media.giphy.com/media/yv17RtHHRqBNiabyTu/giphy.gif" alt="twatter demo 2">
+<img src="https://media.giphy.com/media/byA9kaRwtDE4EyMR9w/giphy.gif" alt="twatter demo 2">
 </p>
 
 
-You can delete a status message:
+You can edit and delete a status message:
 
 <p align="center">
-<img src="https://media.giphy.com/media/MU3dwOpt9pdNWnpQgV/giphy.gif" alt="twatter demo 3">
+<img src="https://media.giphy.com/media/14OwlZOprULws4oFfv/giphy.gif" alt="twatter demo 3">
+</p>
+
+You can like someone's message; but, not your own:
+
+<p align="center">
+<img src="https://media.giphy.com/media/1lxkgncILptIxsTaT0/giphy.gif" alt="twatter demo 4">
+</p>
+
+You can view someone's page, and edit your profile image:
+
+<p align="center">
+<img src="https://media.giphy.com/media/1lvoupVws7UQgOf3Fn/giphy.gif" alt="twatter demo 5">
 </p>
 
 
@@ -63,8 +75,8 @@ npm start
 
 ## Release History
 
-* 0.0.1
-* Work in progress
+* 0.1.0
+* The first proper release
 
 ## Meta
 
