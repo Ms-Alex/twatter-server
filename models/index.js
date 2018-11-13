@@ -4,7 +4,7 @@ mongoose.set("debug", true);
 // Promise library
 mongoose.Promise = Promise;
 // Connect to mongodb
-mongoose.connect('mongodb://localhost/twatter', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/twatter', {
     // To keep connection open
     keepAlive: true,
     useNewUrlParser: true
