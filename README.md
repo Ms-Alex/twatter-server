@@ -76,7 +76,7 @@ npm start
 ## Release History
 
 * 0.1.0
-* The first proper release
+    * The first proper release
 
 ## Meta
 
