@@ -28,6 +28,8 @@ front end:
 npm install
 ```
 
+** Must have node installed.
+
 ## Usage example
 
 Before you are able to post anything, you must login, if not sign up: 
