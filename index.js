@@ -45,17 +45,6 @@ app.use('/api/users',
     usersRoutes
 )
 
-// app.put('/api/messages/:message_id', loginRequired, async function (req, res, next) {
-//     try {
-//         let message = await db.Message.findOneAndUpdate({ _id: req.params.message_id }, { $set: req.body }, { new: true });
-//         console.log(message);
-//         return res.status(200).json(message);
-
-//     } catch (err) {
-//         return next(err);
-//     }
-// } )
-
 //error handler
 app.use(function(req, res, next){
     let err = new Error("Not Found");
@@ -68,5 +57,7 @@ app.use(errorHandler);
 
 app.listen(PORT, function(){
     console.log(`Server is starting on port ${PORT}`);
-})
+});
+
+module.exports.app = app;
 
