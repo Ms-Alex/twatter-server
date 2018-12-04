@@ -67,7 +67,7 @@ You can view someone's page, and edit your profile image:
 
 backend: 
 ```sh
-node index.js
+npm start
 ```
 
 frontend:
