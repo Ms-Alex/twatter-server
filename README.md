@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Ms-Alex/twatter-server.svg?branch=master)](https://travis-ci.com/Ms-Alex/twatter-server)
+
 # Twatter
 > A social application where you can add your status, throughout the day! As well as, checking out others' status' too!!
 
