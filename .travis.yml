@@ -1,3 +1,0 @@
-language: node_js
-nvm:
- - 0.32.1
