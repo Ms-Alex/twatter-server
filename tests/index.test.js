@@ -34,7 +34,7 @@ describe('POST /api/auth/signin', () => {
                   }
                 });
             })
-            .end(done);
+            .end(done());
     });
 });
 
