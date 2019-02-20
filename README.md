@@ -69,7 +69,7 @@ backend:
 
 On separate terminals run: `mongod` and `mongo`.
 
-Then, inside this repo (twatter-server/), run:
+Then, inside twatter-server root directory, run:
 ```sh
 npm start
 ```
