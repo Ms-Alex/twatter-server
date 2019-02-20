@@ -23,7 +23,7 @@ npm install
 
 front end:
 ```sh
-cd app/ && npm install
+npm install
 ```
 
 ** Must have node installed.
@@ -71,14 +71,14 @@ backend:
 
 On separate terminals run: `mongod` and `mongo`.
 
-Then, inside this repo (twatter-app/), run:
+Then, inside this repo (twatter-server/), run:
 ```sh
 npm start
 ```
 
 frontend:
 ```sh
-cd app/ && npm start
+npm start
 ```
 
 ## Release History
