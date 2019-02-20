@@ -26,7 +26,7 @@ front end:
 npm install
 ```
 
-** Must have node installed.
+** Must have node and mongo installed.
 
 ## Usage example
 
@@ -64,8 +64,6 @@ You can view someone's page, and edit your profile image:
 
 
 ## Development setup
-
-Note: Make sure you have mongo installed. To install via brew: https://treehouse.github.io/installation-guides/mac/mongo-mac.html
 
 backend:
 
